@@ -1,0 +1,10 @@
+version: '3'
+services:
+    php:
+        build:
+            context: .
+            dockerfile: Dockerfile
+        expose:
+            - 9000
+        volumes:
+            - ./php/www:/var/www/html
