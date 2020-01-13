@@ -9,23 +9,28 @@
                         <div id="realtimemap" style="height:500px;width:700px;"></div>
                     </div>
                 </div>
+
+                <p>Address: <div id="address"></div></p>
             </div>
         </div>
     </div>
 </template>
 
 <script>
+
+
     export default {
     data(){
         return {
             map:null,
             marker:null,
             data:null,
-            center: {lat: 18, lng: 73},
+            center: {lat:18.5521, lng: 73.7714},
             lineCoordinates: []
 
         }
     },
+
     methods: {
         mapInit(){
          this.map = new google.maps.Map(document.getElementById('realtimemap'), {
@@ -52,7 +57,7 @@
               path: this.lineCoordinates,
               geodesic: true,
               map: this.true,
-              strokeColor: #FF0000,
+              strokeColor: "#FF0000",
               strokeOpacity: 1.0,
               strokeWeight: 2
             });
@@ -68,11 +73,10 @@
         axios.post('/api/map',position).then(response=>{
             console.log(response);
         })
-    }
+    },
         mounted() {
             console.log('Component mounted.')
             this.mapInit();
-            
         },
         created(){
             
