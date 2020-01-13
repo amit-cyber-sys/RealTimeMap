@@ -3,14 +3,13 @@
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">Example Component</div>
+                    <div class="card-header">User Location</div>
                     
                     <div class="card-body">
                         <div id="realtimemap" style="height:500px;width:700px;"></div>
                     </div>
                 </div>
 
-                <p>Address: <div id="address"></div></p>
             </div>
         </div>
     </div>
