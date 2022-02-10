@@ -25,7 +25,7 @@
     },
     "dependencies": {
         "laravel-echo": "^1.6.1",
-        "node-sass": "^4.13.0",
+        "node-sass": "^7.0.0",
         "pusher-js": "^5.0.3"
     }
 }
